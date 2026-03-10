@@ -1,5 +1,0 @@
-
-User-agent: *
-Allow: /
-
-Sitemap: https://Mjcrf2-ops.github.io/Mj/sitemap.xml

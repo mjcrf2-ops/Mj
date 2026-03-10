@@ -1,350 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Top Supplement Reviews</title>
+<title>Best Health Supplements Reviews</title>
 
 <style>
 
 body{
-font-family:Arial;
-background:#f4f4f4;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-padding:0;
+background:#f4f6f8;
 }
 
 header{
-background:#111;
+background:#0c6efd;
 color:white;
 padding:20px;
 text-align:center;
 }
 
 .container{
-max-width:1000px;
+max-width:1200px;
 margin:auto;
 padding:20px;
 }
 
-.product{
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
 background:white;
-margin-bottom:20px;
-display:flex;
-padding:20px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+padding:15px;
+text-align:center;
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.product img{
-width:150px;
-margin-right:20px;
+.card h3{
+margin:10px 0;
 }
 
-.info{
-flex:1;
-}
-
-.rank{
-font-size:20px;
-font-weight:bold;
-color:#ff6600;
-}
-
-.stars{
-color:#ffa500;
-font-size:18px;
-}
-
-.button{
-display:inline-block;
+button{
 background:#28a745;
+border:none;
+padding:12px 18px;
 color:white;
-padding:10px 20px;
-text-decoration:none;
-border-radius:5px;
-margin-top:10px;
+border-radius:8px;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1e7e34;
+}
+
+footer{
+margin-top:40px;
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>Top Supplement Reviews</h1>
-<p>Best Health Supplements Ranked</p>
+
+<h1>Top Health Supplements</h1>
+<p>Compare the Best Natural Supplements</p>
+
 </header>
 
 <div class="container">
 
-<!-- 1 -->
-<div class="product">
-<img src="java-burn.jpg">
-<div class="info">
-<div class="rank">#1</div>
-<h2>Java Burn</h2>
-<div class="stars">★★★★★ 4.9/5</div>
-<p>Java Burn is a metabolism boosting powder designed to mix with coffee to accelerate fat burning.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="grid">
+
+<!-- PRODUCT -->
+
+<div class="card">
+<img src="images/citrusburn.jpg">
+<h3>Citrus Burn</h3>
+<a href="https://4a5eaepx62fzavf6miwo2azj-y.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 2 -->
-<div class="product">
-<img src="leanbiome.jpg">
-<div class="info">
-<div class="rank">#2</div>
-<h2>LeanBiome</h2>
-<div class="stars">★★★★★ 4.8/5</div>
-<p>LeanBiome is a probiotic supplement designed to support healthy gut bacteria and weight loss.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="card">
+<img src="images/javaburn.jpg">
+<h3>Java Burn</h3>
+<a href="https://89cdb9x2-2hs0t74kuj7wcol1i.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 3 -->
-<div class="product">
-<img src="livpure.jpg">
-<div class="info">
-<div class="rank">#3</div>
-<h2>Liv Pure</h2>
-<div class="stars">★★★★★ 4.9/5</div>
-<p>Liv Pure supports liver detox and metabolism using natural ingredients.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="card">
+<img src="images/mitolyn.jpg">
+<h3>Mitolyn</h3>
+<a href="https://26d64bx33a6pdx0luo085d8q7n.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 4 -->
-<div class="product">
-<img src="nagano-tonic.jpg">
-<div class="info">
-<div class="rank">#4</div>
-<h2>Nagano Tonic</h2>
-<div class="stars">★★★★☆ 4.7/5</div>
-<p>Nagano Tonic helps support metabolism and healthy fat burning.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="card">
+<img src="images/leanbiome.jpg">
+<h3>LeanBiome</h3>
+<a href="https://420b8bpy3e3xaw07o5s7ymx215.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 5 -->
-<div class="product">
-<img src="ikaria-lean-belly-juice.jpg">
-<div class="info">
-<div class="rank">#5</div>
-<h2>Ikaria Lean Belly Juice</h2>
-<div class="stars">★★★★☆ 4.7/5</div>
-<p>A Mediterranean inspired supplement designed to help reduce stubborn belly fat.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="card">
+<img src="images/livpure.jpg">
+<h3>Liv Pure</h3>
+<a href="https://7649fhsz3daq9pc8xkwg6b4pew.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 6 -->
-<div class="product">
-<img src="sumatra-slim-belly-tonic.jpg">
-<div class="info">
-<div class="rank">#6</div>
-<h2>Sumatra Slim Belly Tonic</h2>
-<div class="stars">★★★★☆ 4.7/5</div>
-<p>Natural tonic made with tropical plant ingredients to support fat metabolism.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="card">
+<img src="images/naganotônico.jpg">
+<h3>Nagano Tonic</h3>
+<a href="https://a479cjs15c7o7t8aqopau56x43.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 7 -->
-<div class="product">
-<img src="slim-crystal.jpg">
-<div class="info">
-<div class="rank">#7</div>
-<h2>Slim Crystal</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Crystal infused water bottle designed to promote metabolism and wellness.</p>
-<a class="button" href="#">Read Full Review</a>
-</div>
+<div class="card">
+<img src="images/barriga magra.jpg">
+<h3>Lean Belly Juice</h3>
+<a href="https://8f6d0gqxu3cv0l9dpe89r92td1.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 8 -->
-<div class="product">
-<img src="sync.jpg">
-<div class="info">
-<div class="rank">#8</div>
-<h2>Sync</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Sync is a metabolic support supplement designed to balance hormones and support weight loss.</p>
-<a class="button" href="https://09b2dfua45ck9odl2ddj3m0p1z.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/sumatraslim.jpg">
+<h3>Sumatra Slim</h3>
+<a href="https://56309fv4se6w9lbpx9cptdva8v.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 9 -->
-<div class="product">
-<img src="tea-burn.jpg">
-<div class="info">
-<div class="rank">#9</div>
-<h2>Tea Burn</h2>
-<div class="stars">★★★★☆ 4.7/5</div>
-<p>Tea Burn is a metabolism boosting powder designed to be mixed with tea.</p>
-<a class="button" href="https://9d3fdfp46a9saz2iq9mi3cbl1j.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/slimcrystal.jpg">
+<h3>Slim Crystal</h3>
+<a href="https://934018yz-99xbv7m-4s96o5jqk.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 10 -->
-<div class="product">
-<img src="gluco-berry.jpg">
-<div class="info">
-<div class="rank">#10</div>
-<h2>GlucoBerry</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>GlucoBerry helps support healthy blood sugar levels and metabolic function.</p>
-<a class="button" href="https://a727eal-u6gw1w93mns8ezzm1g.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/alldayslimming.jpg">
+<h3>All Day Slimming Tea</h3>
+<a href="https://3ccd89wzv3in1ob2yf6alryx8m.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 11 -->
-<div class="product">
-<img src="metabo-drops.jpg">
-<div class="info">
-<div class="rank">#11</div>
-<h2>Metabo Drops</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Liquid metabolic booster designed to help accelerate fat burning.</p>
-<a class="button" href="https://de725dwb178v9zebohf6r83nzk.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/sincronizar.jpg">
+<h3>Sync</h3>
+<a href="https://09b2dfua45ck9odl2ddj3m0p1z.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 12 -->
-<div class="product">
-<img src="metabo-flex.jpg">
-<div class="info">
-<div class="rank">#12</div>
-<h2>Metabo Flex</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Metabo Flex supports metabolic flexibility and weight management.</p>
-<a class="button" href="https://4fd12av147dzby05lnkesx3du9.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/teaburn.jpg">
+<h3>Tea Burn</h3>
+<a href="https://9d3fdfp46a9saz2iq9mi3cbl1j.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 13 -->
-<div class="product">
-<img src="hepatoburn.jpg">
-<div class="info">
-<div class="rank">#13</div>
-<h2>HepatoBurn</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Supports liver detox and fat metabolism.</p>
-<a class="button" href="https://4fd12av147dzby05lnkesx3du9.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/glucoberry.jpg">
+<h3>GlucoBerry</h3>
+<a href="https://a727eal-u6gw1w93mns8ezzm1g.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 14 -->
-<div class="product">
-<img src="resurge.jpg">
-<div class="info">
-<div class="rank">#14</div>
-<h2>Resurge</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Sleep and metabolism support supplement designed to promote fat burning overnight.</p>
-<a class="button" href="https://f83e2kt3x-5k5o9dun8dwd6u10.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/metabodrops.jpg">
+<h3>Metabo Drops</h3>
+<a href="https://de725dwb178v9zebohf6r83nzk.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 15 -->
-<div class="product">
-<img src="revive.jpg">
-<div class="info">
-<div class="rank">#15</div>
-<h2>Revive</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Revive supports recovery, metabolism and energy production.</p>
-<a class="button" href="https://40c8cht60adk1m7qhgnstl8kcp.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/metaboflex.jpg">
+<h3>Metabo Flex</h3>
+<a href="https://4fd12av147dzby05lnkesx3du9.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 16 -->
-<div class="product">
-<img src="tupi-tea.jpg">
-<div class="info">
-<div class="rank">#16</div>
-<h2>Tupi Tea</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Natural detox tea designed to support weight loss.</p>
-<a class="button" href="https://9ca6blmx08dqdn4r8bmjr7ct9n.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/hepatoburn.jpg">
+<h3>Hepato Burn</h3>
+<a href="https://e17b3dl918ax3td3ncgeu5zorv.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 17 -->
-<div class="product">
-<img src="electro-slim.jpg">
-<div class="info">
-<div class="rank">#17</div>
-<h2>ElectroSlim</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>ElectroSlim supports metabolic energy and fat burning.</p>
-<a class="button" href="https://a096b7l--a9p7s2bncke0hnv9f.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/ressurgir.jpg">
+<h3>Resurge</h3>
+<a href="https://f83e2kt3x-5k5o9dun8dwd6u10.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 18 -->
-<div class="product">
-<img src="protoflow.jpg">
-<div class="info">
-<div class="rank">#18</div>
-<h2>ProtoFlow</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Supports healthy prostate and urinary function.</p>
-<a class="button" href="https://61b34dm8v7hp4y6i096mq52qdl.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/reviver.jpg">
+<h3>Revive</h3>
+<a href="https://40c8cht60adk1m7qhgnstl8kcp.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 19 -->
-<div class="product">
-<img src="morning-fat-melter.jpg">
-<div class="info">
-<div class="rank">#19</div>
-<h2>Morning Fat Melter</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Morning fat burning supplement designed to boost metabolism early in the day.</p>
-<a class="button" href="https://c38b9ckb678x9n6zm42brdq675.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/tupitea.jpg">
+<h3>Tupi Tea</h3>
+<a href="https://9ca6blmx08dqdn4r8bmjr7ct9n.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 20 -->
-<div class="product">
-<img src="cardio-slim-tea.jpg">
-<div class="info">
-<div class="rank">#20</div>
-<h2>Cardio Slim Tea</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Detox tea designed to support cardiovascular health and weight loss.</p>
-<a class="button" href="https://1127cdq140hs5w79lfl3xe-8ov.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/electroslim.jpg">
+<h3>ElectroSlim</h3>
+<a href="https://a096b7l--a9p7s2bncke0hnv9f.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 21 -->
-<div class="product">
-<img src="prostavive.jpg">
-<div class="info">
-<div class="rank">#21</div>
-<h2>ProstaVive</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Supports prostate health and urinary function.</p>
-<a class="button" href="https://657d4iv7388l1wce5f738d2l4x.hop.clickbank.net">Visit Official Website</a>
-</div>
+<div class="card">
+<img src="images/protoflow.jpg">
+<h3>ProtoFlow</h3>
+<a href="https://61b34dm8v7hp4y6i096mq52qdl.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
-<!-- 22 -->
-<div class="product">
-<img src="joint-genesis.jpg">
-<div class="info">
-<div class="rank">#22</div>
-<h2>Joint Genesis</h2>
-<div class="stars">★★★★☆ 4.6/5</div>
-<p>Supports joint mobility and cartilage regeneration.</p>
-<a class="button" href="https://e86b5al231eq2m1gzgwlrbosf8.hop.clickbank.net">Visit Official Website</a>
+<div class="card">
+<img src="images/gordura matinal.jpg">
+<h3>Morning Fat Melter</h3>
+<a href="https://c38b9ckb678x9n6zm42brdq675.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
+
+<div class="card">
+<img src="images/cardioslimtea.jpg">
+<h3>Cardio Slim Tea</h3>
+<a href="https://1127cdq140hs5w79lfl3xe-8ov.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
+</div>
+
+<div class="card">
+<img src="images/prostavive.jpg">
+<h3>Prosta Vive</h3>
+<a href="https://657d4iv7388l1wce5f738d2l4x.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
+</div>
+
+<div class="card">
+<img src="images/joitgenesis.jpg">
+<h3>Joint Genesis</h3>
+<a href="https://e86b5al231eq2m1gzgwlrbosf8.hop.clickbank.net" target="_blank">
+<button>Official Website</button>
+</a>
 </div>
 
 </div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Supplement Comparison. All rights reserved.</p>
+
+</footer>
 
 </body>
+
 </html>

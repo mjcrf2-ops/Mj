@@ -349,7 +349,7 @@ border-radius:6px;
 <br/>
     Based on
     <strong>
-     37,874 Verified Customer Reviews</p><div class="review-description">Thousands of verified customers report positive experiences and noticeable improvements when used consistently.</div>
+     37,874 Verified Customer Reviews</p><div class="review-description">Thousands of users report positive experiences when the product is used consistently.</div>
  reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
 </div>
 <div class="badges">
@@ -876,11 +876,11 @@ Ingredient quality evaluates ingredient purity, dosage accuracy, and scientific 
  evaluates the purity, dosage, and scientific research supporting the ingredients used in the formula.</p></div>
 <div class="bar"><div class="fill" style="width:92%"></div></div>
 <div class="score-title">
-          Manufacturing Standards</p><div class="review-description">Produced in certified facilities following strict quality and safety standards to ensure product consistency.</div>
+          Manufacturing Standards</p><div class="review-description">Produced in certified facilities following strict safety and quality control standards.</div>
  analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
 <div class="bar"><div class="fill" style="width:92%"></div></div>
 <div class="score-title">
-          Customer Reviews</p><div class="review-description">Thousands of verified customers report positive experiences and noticeable improvements when used consistently.</div>
+          Customer Reviews</p><div class="review-description">Thousands of users report positive experiences when the product is used consistently.</div>
  reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
 <div class="bar"><div class="fill" style="width:92%"></div></div>
 <div class="score-title">
@@ -1119,37 +1119,42 @@ Brand transparency evaluates how openly the company shares ingredient sources, c
 </footer>
 <script>
 
-function toggleReview(el){
-
-let box=el.parentElement.parentElement.querySelector(".review-box");
-
-if(box.style.display==="block"){
-box.style.display="none";
-}else{
+else{
 box.style.display="block";
 }
 
 }
 </script>
 <script id="review-toggle">
-function toggleReview(id){
-var el=document.getElementById(id)
-if(el.style.display==="block"){
-el.style.display="none"
-}else{
+else{
 el.style.display="block"
 }
 }
 </script>
 
+
+
+<script>
+function toggleReview(id){
+
+var el = document.getElementById(id);
+
+if(!el) return;
+
+if(el.style.display === "block"){
+el.style.display = "none";
+}else{
+el.style.display = "block";
+}
+
+}
+</script>
+
+
 </body>
 </html>
 <script>
- function toggleReview(id){
-var el = document.getElementById(id);
-if(el.style.display === "none"){
-el.style.display = "block";
-}else{
+ else{
 el.style.display = "none";
 }
 }

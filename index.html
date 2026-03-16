@@ -309,6 +309,12 @@ background:#f5f5f5;
 border-radius:6px;
 }
 </style>
+
+<style id="button-fix">
+.visit-btn{white-space:nowrap}
+.review-btn{white-space:nowrap}
+</style>
+
 </head>
 <body>
 <div style="
@@ -357,7 +363,11 @@ display:inline-block;">
        View Top Ranked Supplements
       </a>
 </div>
-</strong><div class="review-box"><p>Customer reviews reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
+</strong><div class="review-box"><p>Customer reviews
+<div class="review-description" style="display:none" id="customer-reviews">
+Customer reviews represent real user feedback about effectiveness, satisfaction, and results experienced by buyers.
+</div>
+ reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
 </div>
 <div class="badges">
 <span>
@@ -861,7 +871,11 @@ color:#444;
     </p>
 <p>
      Our editorial team reviews ingredient transparency, manufacturing standards, customer feedback and scientific literature before publishing any ranking.
-    </p><div class="review-box"><p>Manufacturing standards analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
+    </p><div class="review-box"><p>Manufacturing standards
+<div class="review-description" style="display:none" id="manufacturing-standards">
+Manufacturing standards analyze whether the supplement is produced in GMP-certified facilities with strict quality control.
+</div>
+ analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
 <p>
      Each product is evaluated based on:
     </p>
@@ -872,17 +886,29 @@ color:#444;
 <div class="score-box">
 <div class="score-title">
           Ingredient Quality — 94%
-         </div><div class="review-box"><p>Ingredient quality evaluates the purity, dosage, and scientific research supporting the ingredients used in the formula.</p></div>
+         </div><div class="review-box"><p>Ingredient quality
+<div class="review-description" style="display:none" id="ingredient-quality">
+Ingredient quality evaluates ingredient purity, dosage accuracy, and scientific support behind the formulation.
+</div>
+ evaluates the purity, dosage, and scientific research supporting the ingredients used in the formula.</p></div>
 <div class="bar">
 </div>
 <div class="score-title">
           Manufacturing Standards — 89%
-         </div><div class="review-box"><p>Manufacturing standards analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
+         </div><div class="review-box"><p>Manufacturing standards
+<div class="review-description" style="display:none" id="manufacturing-standards">
+Manufacturing standards analyze whether the supplement is produced in GMP-certified facilities with strict quality control.
+</div>
+ analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
 <div class="bar">
 </div>
 <div class="score-title">
           Customer Reviews — 87%
-         </div><div class="review-box"><p>Customer reviews reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
+         </div><div class="review-box"><p>Customer reviews
+<div class="review-description" style="display:none" id="customer-reviews">
+Customer reviews represent real user feedback about effectiveness, satisfaction, and results experienced by buyers.
+</div>
+ reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
 <div class="bar">
 </div>
 <div class="score-title">
@@ -930,7 +956,15 @@ color:#444;
 <div class="product-card">
 <div class="product-title">
         Manufacturing standards
-       </div><div class="review-box"><p>Manufacturing standards analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
+<div class="review-description" style="display:none" id="manufacturing-standards">
+Manufacturing standards analyze whether the supplement is produced in GMP-certified facilities with strict quality control.
+</div>
+
+       </div><div class="review-box"><p>Manufacturing standards
+<div class="review-description" style="display:none" id="manufacturing-standards">
+Manufacturing standards analyze whether the supplement is produced in GMP-certified facilities with strict quality control.
+</div>
+ analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
 <div class="rating">
         ⭐⭐⭐⭐☆ 4.7
        </div>
@@ -964,7 +998,15 @@ color:#444;
 <div class="product-card">
 <div class="product-title">
         Customer reviews
-       </div><div class="review-box"><p>Customer reviews reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
+<div class="review-description" style="display:none" id="customer-reviews">
+Customer reviews represent real user feedback about effectiveness, satisfaction, and results experienced by buyers.
+</div>
+
+       </div><div class="review-box"><p>Customer reviews
+<div class="review-description" style="display:none" id="customer-reviews">
+Customer reviews represent real user feedback about effectiveness, satisfaction, and results experienced by buyers.
+</div>
+ reflect the overall satisfaction of real users based on effectiveness, consistency and reported benefits.</p></div>
 <div class="rating">
         ⭐⭐⭐⭐☆ 4.7
        </div>
@@ -1032,6 +1074,10 @@ color:#444;
 <div class="product-card">
 <div class="product-title">
         Transparency of the brand
+<div class="review-description" style="display:none" id="transparency-of-the-brand">
+Brand transparency evaluates how openly the company shares ingredient sources, company details, and policies.
+</div>
+
        </div><div class="review-box"><p>Brand transparency evaluates how openly the company shares ingredient sources, research and refund policies.</p></div>
 <div class="rating">
         ⭐⭐⭐⭐☆ 4.7
@@ -1114,7 +1160,19 @@ box.style.display="block";
 }
 
 }
-</script></body>
+</script>
+<script id="review-toggle">
+function toggleReview(id){
+var el=document.getElementById(id)
+if(el.style.display==="block"){
+el.style.display="none"
+}else{
+el.style.display="block"
+}
+}
+</script>
+
+</body>
 </html>
 <script>
  function toggleReview(id){

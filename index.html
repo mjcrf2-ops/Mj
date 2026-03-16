@@ -1,3 +1,78 @@
+
+<style>
+
+.product-card{
+background:white;
+border-radius:12px;
+box-shadow:0 4px 14px rgba(0,0,0,0.1);
+padding:20px;
+margin:20px 0;
+}
+
+.product-title{
+font-size:20px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.rating{
+color:#f59e0b;
+margin-bottom:10px;
+}
+
+.button-review{
+background:#e5e7eb;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+margin-right:10px;
+}
+
+.button-buy{
+background:#16a34a;
+color:white;
+padding:12px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.review-box{
+display:none;
+margin-top:10px;
+background:#f8fafc;
+padding:10px;
+border-radius:6px;
+}
+
+</style>
+
+<section style="padding:40px;background:#0f172a;color:white;text-align:center">
+
+<h1 style="font-size:28px;margin-bottom:10px">
+2026 Independent Supplement Research
+</h1>
+
+<p style="font-size:16px;margin-bottom:20px">
+Top Metabolism Support Supplements Ranked
+</p>
+
+<div style="font-size:18px;margin-bottom:20px">
+⭐ 4.8 Average Rating<br>
+Based on 37,000+ Consumer Reviews
+</div>
+
+<a href="#top5" style="
+background:#22c55e;
+padding:14px 22px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;">
+Compare Top Supplements
+</a>
+
+</section>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -477,11 +552,191 @@ color:#444;
 <p>Our editorial team reviews ingredient transparency, manufacturing standards, customer feedback and scientific literature before publishing any ranking.</p>
 <p>Each product is evaluated based on:</p>
 <ul>
-<li>Ingredient quality</li>
-<li>Manufacturing standards</li>
-<li>Customer reviews</li>
-<li>Popularity and demand</li>
-<li>Transparency of the brand</li>
+
+<div class="product-card">
+
+<div class="product-title">Ingredient quality</div>
+
+<div class="rating">
+⭐⭐⭐⭐☆ 4.7
+</div>
+
+<div>
+
+<a href="javascript:void(0)" class="button-review"
+onclick="toggleReview('r1')">
+Read Review
+</a>
+
+<a href="#" class="button-buy">
+Visit Official Site
+</a>
+
+</div>
+
+<div id="r1" class="review-box">
+
+<strong>Pros</strong><br>
+✔ Natural ingredients<br>
+✔ High consumer rating<br>
+
+<br>
+
+<strong>Cons</strong><br>
+• Only available online
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-title">Manufacturing standards</div>
+
+<div class="rating">
+⭐⭐⭐⭐☆ 4.7
+</div>
+
+<div>
+
+<a href="javascript:void(0)" class="button-review"
+onclick="toggleReview('r1')">
+Read Review
+</a>
+
+<a href="#" class="button-buy">
+Visit Official Site
+</a>
+
+</div>
+
+<div id="r1" class="review-box">
+
+<strong>Pros</strong><br>
+✔ Natural ingredients<br>
+✔ High consumer rating<br>
+
+<br>
+
+<strong>Cons</strong><br>
+• Only available online
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-title">Customer reviews</div>
+
+<div class="rating">
+⭐⭐⭐⭐☆ 4.7
+</div>
+
+<div>
+
+<a href="javascript:void(0)" class="button-review"
+onclick="toggleReview('r1')">
+Read Review
+</a>
+
+<a href="#" class="button-buy">
+Visit Official Site
+</a>
+
+</div>
+
+<div id="r1" class="review-box">
+
+<strong>Pros</strong><br>
+✔ Natural ingredients<br>
+✔ High consumer rating<br>
+
+<br>
+
+<strong>Cons</strong><br>
+• Only available online
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-title">Popularity and demand</div>
+
+<div class="rating">
+⭐⭐⭐⭐☆ 4.7
+</div>
+
+<div>
+
+<a href="javascript:void(0)" class="button-review"
+onclick="toggleReview('r1')">
+Read Review
+</a>
+
+<a href="#" class="button-buy">
+Visit Official Site
+</a>
+
+</div>
+
+<div id="r1" class="review-box">
+
+<strong>Pros</strong><br>
+✔ Natural ingredients<br>
+✔ High consumer rating<br>
+
+<br>
+
+<strong>Cons</strong><br>
+• Only available online
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-title">Transparency of the brand</div>
+
+<div class="rating">
+⭐⭐⭐⭐☆ 4.7
+</div>
+
+<div>
+
+<a href="javascript:void(0)" class="button-review"
+onclick="toggleReview('r1')">
+Read Review
+</a>
+
+<a href="#" class="button-buy">
+Visit Official Site
+</a>
+
+</div>
+
+<div id="r1" class="review-box">
+
+<strong>Pros</strong><br>
+✔ Natural ingredients<br>
+✔ High consumer rating<br>
+
+<br>
+
+<strong>Cons</strong><br>
+• Only available online
+
+</div>
+
+</div>
+
 </ul>
 <p>This article was last updated in March 2026.</p>
 </div>
@@ -517,3 +772,16 @@ This website is an independent review site. We may receive compensation from som
 </footer>
 </body>
 </html>
+
+<script>
+
+function toggleReview(id){
+var el = document.getElementById(id);
+if(el.style.display === "none"){
+el.style.display = "block";
+}else{
+el.style.display = "none";
+}
+}
+
+</script>

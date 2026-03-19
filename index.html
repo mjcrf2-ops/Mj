@@ -1100,14 +1100,7 @@ This website is an independent review site and may receive compensation from som
 
 
 <script>
-function toggleBottomReview(id){
-
-  let all = document.querySelectorAll('[id^="bottom-r"]');
-
-  all.forEach(el=>{
-    if(el.id !== id){
-      el.classList.remove("show");
-      setTimeout(()=>{el.style.display="none"},200);
+,200);
     }
   });
 
@@ -1269,86 +1262,15 @@ setInterval(draw, 30);
 </script>
 
 
-<script id="particles-height-fix">
-
-function resizeCanvasFull(){
-  const canvas = document.getElementById("particles");
-  if(!canvas) return;
-
-  const fullHeight = document.documentElement.scrollHeight;
-
-  canvas.width = window.innerWidth;
-  canvas.height = fullHeight;
-}
-
-window.addEventListener("load", resizeCanvasFull);
-window.addEventListener("resize", resizeCanvasFull);
-
-</script>
 
 
-<script id="particles-safe-run">
 
-window.addEventListener("load", function(){
 
-const canvas = document.getElementById("particles");
-if(!canvas) return;
-
-const ctx = canvas.getContext("2d");
-
-function resize(){
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-resize();
-window.addEventListener("resize", resize);
-
-let particles = [];
-
-for(let i=0;i<60;i++){
-particles.push({
-x: Math.random()*canvas.width,
-y: Math.random()*canvas.height,
-r: Math.random()*2,
-d: Math.random()*1
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="rgba(34,197,94,0.5)";
-ctx.beginPath();
-
-for(let i=0;i<particles.length;i++){
-let p=particles[i];
-ctx.moveTo(p.x,p.y);
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
-}
-
-ctx.fill();
-
-for(let i=0;i<particles.length;i++){
-let p=particles[i];
-p.y += p.d;
-if(p.y > canvas.height){
-p.y = 0;
-p.x = Math.random()*canvas.width;
-}
-}
-
-requestAnimationFrame(draw);
-}
-
-draw();
-
-});
-</script>
 
 
 
 <!-- PARTICLES GLOBAL FIX -->
-<canvas id="particles"></canvas>
+
 
 <style>
 #particles{
@@ -1432,6 +1354,117 @@ draw();
 
 
 <script>
+ else {
+    el.style.display = "block";
+  }
+}
+</script>
+
+
+
+<canvas id="particles"></canvas>
+
+<script>
+window.addEventListener("load", function(){
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+function resize(){
+  canvas.width = window.innerWidth;
+  canvas.height = document.documentElement.scrollHeight;
+}
+
+resize();
+window.addEventListener("resize", resize);
+
+let particles = [];
+let mouse = { x:null, y:null };
+
+window.addEventListener("mousemove", e=>{
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+
+for(let i=0;i<80;i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    vx:(Math.random()-0.5)*1.5,
+    vy:(Math.random()-0.5)*1.5,
+    r:Math.random()*2+1
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle="#22c55e";
+    ctx.fill();
+  });
+
+  for(let i=0;i<particles.length;i++){
+    for(let j=i;j<particles.length;j++){
+      let dx = particles[i].x - particles[j].x;
+      let dy = particles[i].y - particles[j].y;
+      let dist = Math.sqrt(dx*dx+dy*dy);
+
+      if(dist<120){
+        ctx.beginPath();
+        ctx.strokeStyle="rgba(34,197,94,"+(1-dist/120)+")";
+        ctx.lineWidth=0.5;
+        ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  particles.forEach(p=>{
+    p.x+=p.vx;
+    p.y+=p.vy;
+
+    if(p.x<0||p.x>canvas.width) p.vx*=-1;
+    if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+    if(mouse.x && mouse.y){
+      let dx = p.x - mouse.x;
+      let dy = p.y - mouse.y;
+      let dist = Math.sqrt(dx*dx+dy*dy);
+
+      if(dist<150){
+        p.x += dx*0.02;
+        p.y += dy*0.02;
+      }
+    }
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+
+});
+</script>
+
+<style>
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+}
+</style>
+
+
+
+<script>
 function toggleBottomReview(id){
   let el = document.getElementById(id);
   if(!el) return;
@@ -1443,6 +1476,7 @@ function toggleBottomReview(id){
   }
 }
 </script>
+
 
 </body>
 </html>

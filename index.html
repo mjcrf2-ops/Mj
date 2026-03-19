@@ -467,6 +467,22 @@ padding:15px;
 
 </style>
 
+
+<style id="review-anim">
+.review-box{
+  display:none;
+  opacity:0;
+  transform:translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.review-box.show{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+
 </head>
 <body>
 <p style="text-align:center;font-weight:bold;color:#e67e22;margin:10px 0;">🔥 Updated today - Trending products</p><div style="
@@ -1010,5 +1026,32 @@ This website is an independent review site and may receive compensation from som
 
 </footer>
 
+
+
+<script>
+function toggleBottomReview(id){
+
+  let all = document.querySelectorAll('[id^="bottom-r"]');
+
+  all.forEach(el=>{
+    if(el.id !== id){
+      el.classList.remove("show");
+      setTimeout(()=>{el.style.display="none"},200);
+    }
+  });
+
+  let el = document.getElementById(id);
+
+  if(!el) return;
+
+  if(el.classList.contains("show")){
+    el.classList.remove("show");
+    setTimeout(()=>{el.style.display="none"},200);
+  } else {
+    el.style.display="block";
+    setTimeout(()=>{el.classList.add("show")},10);
+  }
+}
+</script>
 
 </body></html>

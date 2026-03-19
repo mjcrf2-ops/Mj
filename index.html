@@ -514,6 +514,25 @@ filter: drop-shadow(0 0 6px #22c55e);
 
 </style>
 
+
+<style id="particles-fullpage-fix">
+
+html, body{
+height:100%;
+}
+
+#particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -1226,6 +1245,24 @@ function update(){
 }
 
 setInterval(draw, 30);
+
+</script>
+
+
+<script id="particles-height-fix">
+
+function resizeCanvasFull(){
+  const canvas = document.getElementById("particles");
+  if(!canvas) return;
+
+  const fullHeight = document.documentElement.scrollHeight;
+
+  canvas.width = window.innerWidth;
+  canvas.height = fullHeight;
+}
+
+window.addEventListener("load", resizeCanvasFull);
+window.addEventListener("resize", resizeCanvasFull);
 
 </script>
 

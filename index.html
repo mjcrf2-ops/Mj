@@ -483,7 +483,23 @@ padding:15px;
 }
 </style>
 
+
+<style id="review-anim-safe">
+.review-box{
+  display:none;
+  opacity:0;
+  transform:translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.review-box.show{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
 </head>
+
 <body>
 <p style="text-align:center;font-weight:bold;color:#e67e22;margin:10px 0;">🔥 Updated today - Trending products</p><div style="
     background:#ff6600;
@@ -990,7 +1006,7 @@ This ranking is based on independent analysis of supplement ingredients, manufac
 
 <div class="rating">⭐⭐⭐⭐⭐ 4.8 Overall Rating</div>
 
-<button onclick="toggleReview('finalReview')" class="button-review">Read Review</button>
+<button onclick="toggleBottomReview('finalReview')" class="button-review">Read Review</button>
 
 <div id="finalReview" class="review-box">
 ✔ High-quality ingredients<br>
@@ -1054,4 +1070,55 @@ function toggleBottomReview(id){
 }
 </script>
 
-</body></html>
+
+<canvas id="particles"></canvas>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<60;i++){
+particles.push({
+x: Math.random()*canvas.width,
+y: Math.random()*canvas.height,
+r: Math.random()*2,
+d: Math.random()*1
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="rgba(34,197,94,0.5)";
+ctx.beginPath();
+
+for(let i=0;i<particles.length;i++){
+let p=particles[i];
+ctx.moveTo(p.x,p.y);
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
+}
+
+ctx.fill();
+update();
+}
+
+function update(){
+for(let i=0;i<particles.length;i++){
+let p=particles[i];
+p.y += p.d;
+if(p.y > canvas.height){
+p.y = 0;
+p.x = Math.random()*canvas.width;
+}
+}
+}
+
+setInterval(draw,30);
+</script>
+
+</body>
+</html>

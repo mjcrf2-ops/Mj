@@ -939,122 +939,7 @@ color:#e2e8f0;
     </p>
 <p>
 <strong>
-      Lead Researcher:
-     </strong>Reviewed by our editorial team</p>
-<p>
-     Our editorial team reviews ingredient transparency, manufacturing standards, customer feedback and scientific literature before publishing any ranking.
-    </p><div class="review-box"><p>Manufacturing standards
-<div class="review-description" id="manufacturing-standards" style="display:none">
-Manufacturing standards analyze whether the supplement is produced in GMP-certified facilities with strict quality control.
-</div>
- analyze whether the supplement is produced in certified GMP facilities with strict quality control.</p></div>
-<p>
-     Each product is evaluated based on:
-    </p>
-<ul>
-<li>
-<div class="product-card">
-<div class="product-title">
-
-<div class="score-box">
-
-<h2 style="margin-bottom:20px;">Editorial Score Breakdown</h2>
-
-<div class="score-title">Ingredient Quality — 94%</div>
-<div class="bar"><div class="fill" style="width:94%"></div></div>
-
-<div class="score-title">Manufacturing Standards — 92%</div>
-<div class="bar"><div class="fill" style="width:92%"></div></div>
-
-<div class="score-title">Customer Reviews — 93%</div>
-<div class="bar"><div class="fill" style="width:93%"></div></div>
-
-<div class="score-title">Popularity — 91%</div>
-<div class="bar"><div class="fill" style="width:91%"></div></div>
-
-<div class="score-title">Transparency — 82%</div>
-<div class="bar"><div class="fill" style="width:82%"></div></div>
-
-<br>
-
-<div class="rating">⭐⭐⭐⭐⭐ 4.8 Overall</div>
-
-<button onclick="toggleReview('r1')" class="button-review">Read Review</button>
-<div id="r1" class="review-box">
-Strong ingredients, well balanced formula.
-</div>
-
-<button onclick="toggleReview('r2')" class="button-review">Read Review</button>
-<div id="r2" class="review-box">
-Produced in certified facilities with high quality control.
-</div>
-
-<button onclick="toggleReview('r3')" class="button-review">Read Review</button>
-<div id="r3" class="review-box">
-Thousands of positive user experiences.
-</div>
-
-</div>
-
-<script>
-function toggleReview(id){
-var el = document.getElementById(id);
-el.style.display = el.style.display === "block" ? "none" : "block";
-}
-</script>
-
-</div></div></div></div></li></ul></div></section>
-<canvas id="particles"></canvas>
-<script>
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for(let i=0;i<60;i++){
-particles.push({
-x: Math.random()*canvas.width,
-y: Math.random()*canvas.height,
-r: Math.random()*2,
-d: Math.random()*1
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle="rgba(34,197,94,0.5)";
-ctx.beginPath();
-
-for(let i=0;i<particles.length;i++){
-let p=particles[i];
-ctx.moveTo(p.x,p.y);
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
-}
-
-ctx.fill();
-update();
-}
-
-function update(){
-for(let i=0;i<particles.length;i++){
-let p=particles[i];
-p.y += p.d;
-if(p.y > canvas.height){
-p.y = 0;
-p.x = Math.random()*canvas.width;
-}
-}
-}
-
-setInterval(draw,30);
-</script>
-
-
-
-<!-- 🔥 REBUILT BOTTOM SECTION -->
+      REBUILT BOTTOM SECTION -->
 
 <section style="margin-top:80px">
 
@@ -1111,10 +996,10 @@ This website is an independent review site and may receive compensation from som
 </p>
 
 <p style="margin-top:15px;">
-<a href="#" style="color:#22c55e; margin:0 10px;">Privacy Policy</a> |
-<a href="#" style="color:#22c55e; margin:0 10px;">Terms of Service</a> |
-<a href="#" style="color:#22c55e; margin:0 10px;">Contact</a> |
-<a href="#" style="color:#22c55e; margin:0 10px;">Disclaimer</a>
+<a href="privacy.html" style="color:#22c55e; margin:0 10px;">Privacy Policy</a> |
+<a href="privacy.html" style="color:#22c55e; margin:0 10px;">Terms of Service</a> |
+<a href="privacy.html" style="color:#22c55e; margin:0 10px;">Contact</a> |
+<a href="privacy.html" style="color:#22c55e; margin:0 10px;">Disclaimer</a>
 </p>
 
 <p style="margin-top:15px;">

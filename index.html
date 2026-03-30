@@ -557,6 +557,7 @@ z-index:1;
 
 <body>
 <canvas id='particles'></canvas>
+<canvas id='particles'></canvas>
 <p style="text-align:center;font-weight:bold;color:#e67e22;margin:10px 0;">🔥 Updated today - Trending products</p><div style="
     background:#ff6600;
     color:white;
@@ -1237,24 +1238,21 @@ pointer-events:none;
 
 
 
+
+
+
 <script>
 function toggleBottomReview(id){
-  let el = document.getElementById(id);
+  const el = document.getElementById(id);
   if(!el) return;
 
-  el.classList.toggle("show");
-
-  let el = document.getElementById(id);
-  if(!el) return;
-
-  if(el.style.display === "block"){
-    el.style.display = "none";
+  if(el.classList.contains("show")){
+    el.classList.remove("show");
   } else {
-    el.style.display = "block";
+    el.classList.add("show");
   }
 }
 </script>
-
 
 
 <script>
